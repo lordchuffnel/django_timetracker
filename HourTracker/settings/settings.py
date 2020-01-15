@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from django.conf.global_settings import LOGOUT_REDIRECT_URL
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
@@ -28,12 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-INTERNAL_IPS = [
-    # ...
-    '127.0.0.1',
-    # ...
-]
-
 
 # Application definition
 
@@ -45,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'debug_toolbar',
     'django_extensions',
     'allauth',
     'allauth.account',
@@ -66,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'HourTracker.urls'
@@ -124,6 +118,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

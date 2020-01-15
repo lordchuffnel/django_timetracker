@@ -17,6 +17,8 @@ django-webpack-loader = "*"
 markdown = "*"
 django-filter = "*"
 graphene-django = "*"
+django-debug-toolbar = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.6"
