@@ -5,10 +5,18 @@ verify_ssl = true
 
 [dev-packages]
 django-debug-toolbar = "*"
+django-extensions = "*"
 
 [packages]
 django = "*"
-django-extensions = "*"
+django-allauth = "*"
+django-braces = "*"
+django-crispy-forms = "*"
+django-bleach = "*"
+django-webpack-loader = "*"
+markdown = "*"
+django-filter = "*"
+graphene-django = "*"
 
 [requires]
 python_version = "3.6"
