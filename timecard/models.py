@@ -6,7 +6,7 @@ class Timecard(models.Model):
     date = models.DateField(auto_now=False, auto_now_add=False, blank=True, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    username = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=False)
+    username = models.ForeignKey(User, related_name='timecard', on_delete=models.CASCADE, blank=False, null=False)
     start_time = models.TimeField(verbose_name="Start Time", null=False)
     lunch = models.BooleanField(default=False)
     end_time = models.TimeField(verbose_name="End Time")
@@ -15,7 +15,7 @@ class Timecard(models.Model):
     sick_day = models.BooleanField(default=False)
     
     def __str__(self):
-        return self.username
+        return str(self.username) + str(self.date) 
     
     
     

@@ -147,5 +147,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 GRAPHENE = {
-    'SCHEMA': 'HourTracker.schema.schema',
+    'SCHEMA': 'HourTracker.schema.schema'
 }

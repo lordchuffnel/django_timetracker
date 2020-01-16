@@ -19,6 +19,7 @@ django-filter = "*"
 graphene-django = "*"
 django-debug-toolbar = "*"
 django-extensions = "*"
+werkzeug = "*"
 
 [requires]
 python_version = "3.6"
